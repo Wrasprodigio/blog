@@ -21,7 +21,13 @@
 
 <header>
     <nav class="navbar bg-body-tertiary" style="padding: 10px" data-bs-theme="dark">
-        <span class="navbar-brand mb-0 h1" style="font-size: 2rem;">MyBlogProject</span>
+        <a href="/posts"><span class="navbar-brand mb-0 h1" style="font-size: 2rem;">MyBlogProject</span></a>
+        <a href="/newpost" class="btn btn-success" style="margin:0px 5px;" type="button">Novo Post</a>
+
+        <form class="d-flex" role="search"  th:action="@{/}" method="get" >
+            <input class="form-control me-2" name="keyword" type="text" th:value="${keyword}" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
     </nav>
 </header>
 
