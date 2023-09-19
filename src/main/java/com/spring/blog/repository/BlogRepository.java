@@ -4,6 +4,7 @@ import com.spring.blog.model.Post;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,7 +13,10 @@ import java.util.List;
 @Repository
 public interface BlogRepository extends JpaRepository<Post, Long> {
 
-    @Query(value = "select u from Post u where upper(trim(u.titulo)) like %?1%")
-    List<Post> buscarPorNome(String name);
+    @Query("SELECT u FROM Post u WHERE (trim(u.titulo)) ILIKE %?1%"
+            + " OR (trim(u.autor)) ILIKE %?1%"
+            + " OR CONCAT(u.id, '') ILIKE %?1%")
+    public List<Post> findAll(String keyword);
+
 
 }

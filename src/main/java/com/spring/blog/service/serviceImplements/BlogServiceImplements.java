@@ -18,6 +18,13 @@ public class BlogServiceImplements implements BlogService {
     public List<Post> findByAll() {
         return blogRepository.findAll();
     }
+    @Override
+    public List<Post> listAll(String keyword) {
+            if (keyword != null){
+                return blogRepository.findAll(keyword);
+            }
+        return blogRepository.findAll();
+        }
 
     @Override
     public Post findById(long id) {
@@ -27,12 +34,6 @@ public class BlogServiceImplements implements BlogService {
     @Override
     public Post save(Post post) {
         return blogRepository.save(post);
-    }
-
-
-    @Override
-    public List<Post> buscarPorNome(String name) {
-        return blogRepository.buscarPorNome(name);
     }
 
     @Override
