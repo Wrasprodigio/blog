@@ -23,9 +23,9 @@
     <nav class="navbar bg-body-tertiary" style="padding: 15px" data-bs-theme="dark">
         <a href="/posts"><span class="navbar-brand mb-0 h1" style="font-size: 2rem;">MyBlogProject</span></a>
 
-        <form class="d-flex" role="search"  th:action="@{/}" method="get" style="margin-top:5px">
-            <input class="form-control me-2" name="keyword" type="text" th:value="${keyword}" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+        <form class="d-flex" role="search"  th:action="@{/}" method="get" style="margin-top: 5px color: white;">
+            <input class="form-control me-2" name="keyword" type="text"  th:value="${keyword}" style="color: white;" placeholder="Search" aria-label="Search" >
+            <button class="btn btn-outline-success" type="submit" style="color: white;">Search</button>
         </form>
     </nav>
 </header>

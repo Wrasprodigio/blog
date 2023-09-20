@@ -12,9 +12,13 @@
 <body>
 
 <header>
-    <nav class="navbar bg-body-tertiary" style="padding: 10px" data-bs-theme="dark">
-        <span class="navbar-brand mb-0 h1" style="font-size: 2rem;">MyBlogProject</span>
-        <a href="/newpost" class="btn btn-success" style="margin:0px 5px;" type="button">Novo Post</a>
+    <nav class="navbar bg-body-tertiary" style="padding: 15px" data-bs-theme="dark">
+        <a href="/posts"><span class="navbar-brand mb-0 h1" style="font-size: 2rem;">MyBlogProject</span></a>
+
+        <form class="d-flex" role="search"  th:action="@{/}" method="get" style="margin-top: 5px color: white;">
+            <input class="form-control me-2" name="keyword" type="text"  th:value="${keyword}" style="color: white;" placeholder="Search" aria-label="Search" >
+            <button class="btn btn-outline-success" type="submit" style="color: white;">Search</button>
+        </form>
 
     </nav>
 </header>
@@ -22,15 +26,20 @@
 <section>
     <div class="container" style="width: 70%; padding-bottom: 30px;">
         <nav aria-label="breadcrumb">
+            <a href="/newpost" class="btn btn-success" style="margin:10px 5px;" type="button">Novo Post</a>
+            <th:block th:include="messageValidation"></th:block>
+
             <ol class="breadcrumb" style="padding-left: 0px; margin: 10px 0px">
                 <li class="breadcrumb-item active" style="margin-top: 5px" aria-current="page">Posts</li>
             </ol>
         </nav>
 
-        <div class="card shadow-sm bg-white rounded" style="margin-top: 0px; " th:each="post : ${posts}">
+        <div class="card shadow-sm bg-white rounded" style="margin-top: 10px; " th:each="post : ${posts}">
             <div class="card-body">
                 <p class="card-subtitle mb-2 text-muted" style="font-size: 0.8rem;">
+                    <i class="material-icons">person_outline</i>
                     <span th:text="${post.autor}"></span>
+                    <i class="material-icons">calendar_today</i>
                     <span th:text="${post.data}"></span>
                 </p>
 <!--                <a th:href="${(#mvc.url('BC#getPostDetails').arg(0, post.id)).build()}"><h4 class="card-title"-->
@@ -42,7 +51,7 @@
 
                 <a th:href="${(#mvc.url('BC#getPostDetails').arg(0, post.id)).build()}" class="card-link"></a>
 <!--                style="max-width: 25ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"-->
-                <a th:href="@{/posts/editar/{id}(id=${post.id})}" class="btn btn-warning">Editar</a>
+                <a th:href="@{/posts/editar/{id}(id=${post.id})}" class="btn btn-primary">Editar</a>
                 <a th:href="@{/posts/{id}(id=${post.id})}" class="btn btn-danger">Excluir</a>
 
             </div>
