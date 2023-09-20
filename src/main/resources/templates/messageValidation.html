@@ -5,9 +5,22 @@
 <head>
 
 </head>
-<body>
+<body >
 <div class="alert alert-danger alert-dismissible" role="alert" th:if="${not #strings.isEmpty(mensagem)}">
   <span th:text="${mensagem}"></span>
 </div>
+
+<div class="alert alert-success w-25" role="alert" th:if="${addSucesso}">
+  <span th:text="${addSucesso}"></span>
+</div>
+
+<div class="alert alert-primary w-25" role="alert" th:if="${editSucesso}">
+  <span th:text="${editSucesso}"></span>
+</div>
+
+<div class="alert alert-danger w-25" role="alert" th:if="${deleteSucesso}">
+  <span th:text="${deleteSucesso}"></span>
+</div>
+
 </body>
 </html>

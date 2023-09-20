@@ -20,11 +20,10 @@
 <body>
 
 <header>
-    <nav class="navbar bg-body-tertiary" style="padding: 10px" data-bs-theme="dark">
-        <a href="/posts"><span class="navbar-brand mb-0 h1" style="font-size: 2rem;">MyBlogProject</span></a>
-        <a href="/newpost" class="btn btn-success" style="margin:0px 5px;" type="button">Novo Post</a>
+    <nav class="navbar bg-body-tertiary" style="padding: 15px" data-bs-theme="dark">
+    <a href="/posts"><span class="navbar-brand mb-0 h1" style="font-size: 2rem;">MyBlogProject</span></a>
 
-        <form class="d-flex" role="search"  th:action="@{/}" method="get" >
+        <form class="d-flex" role="search"  th:action="@{/}" method="get" style="margin-top:5px">
             <input class="form-control me-2" name="keyword" type="text" th:value="${keyword}" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
@@ -33,15 +32,14 @@
 
 <section>
     <div>
-
+        <th:block th:include="messageValidation"></th:block>
         <div class="container" style="width: 70%; padding-bottom: 30px;">
-            <br>
-            <h1 class="text-center">Editar Post</h1>
+            <h2 class="text-center" style="margin-top: 10px">Edit Post</h2>
 
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb" style="padding-left: 0px; margin: 10px 0px">
                     <li class="breadcrumb-item" style="margin-top: 5px" aria-current="page"><a href="/posts">Posts</a></li>
-                    <li class="breadcrumb-item active link-dark" aria-current="page" style="color: white; margin-top: 5px">New Post</li>
+                    <li class="breadcrumb-item active link-dark" aria-current="page" style="color: white; margin-top: 5px">Edit Post</li>
 
                 </ol>
             </nav>

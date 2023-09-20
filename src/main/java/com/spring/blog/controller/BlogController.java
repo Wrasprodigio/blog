@@ -60,17 +60,19 @@ public class BlogController {
         }
         post.setData(LocalDate.now());
         blogService.save(post);
+        attributes.addFlashAttribute("addSucesso", "Post adicionado com sucesso.");
         return "redirect:/posts";
     }
 
     @GetMapping("/posts/editar/{id}")
     public String mostrarFormularioDeEditar(@PathVariable Long id, Model modelo) {
         modelo.addAttribute("post", blogService.findById(id));
+
         return "editar_post";
     }
 
     @PostMapping("/posts/{id}")
-    public String atualizarPost(@PathVariable Long id, @ModelAttribute("estudante") Post post, Model modelo) {
+    public String atualizarPost(@PathVariable Long id, @ModelAttribute("post") Post post, RedirectAttributes attributes) {
         Post postExiste = blogService.findById(id);
 //        postExiste.setId(id);
         postExiste.setTitulo(post.getTitulo());
@@ -78,14 +80,16 @@ public class BlogController {
         postExiste.setTexto(post.getTexto());
 
         blogService.save(postExiste);
+        attributes.addFlashAttribute("editSucesso", "Post editado com sucesso!");
         return "redirect:/posts";
     }
 
     @GetMapping("/posts/{id}")
-    public String excluirPost(@PathVariable Long id) {
+    public String excluirPost(@PathVariable Long id, RedirectAttributes attributes) {
         blogService.excluirPost(id);
+        attributes.addFlashAttribute("deleteSucesso", "Post excluido com sucesso!");
         return "redirect:/posts";
-    }
 
+    }
 
 }
