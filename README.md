@@ -1,12 +1,16 @@
 # Blog
 ### Segundo Projeto em Java
-🖥️ Tecnologias Utilizadas:<br>
-- Java, Spring Boot, Spring Data JPA, PostgreSQL, Thymeleaf e Bootstrap<br>
+A finalidade do projeto é para testar meus conhecimentos como Back-end. 
 
-Este projeto foi um desafio para mim, algumas das funcionalidades que construir:
-- Criação de Posts: Os usuários podem criar, editar e excluir facilmente suas postagens, com suporte a formatação de texto enriquecido.<br>
-- Pesquisa e Navegação: Um sistema de pesquisa eficaz e navegação intuitiva facilita a descoberta de conteúdo.<br>
-- Responsividade: O Blog é totalmente responsivo, garantindo uma experiência de usuário consistente em dispositivos móveis e desktops.
+Quero compartilhar com vocês um projeto em que tenho trabalhado ultimamente. Tive a oportunidade de criar uma API para o nosso blog, com o objetivo de aprimorar nossos recursos de gerenciamento de conteúdo e proporcionar uma melhor experiência para nossos leitores.
+
+Optei por utilizar o Java como a linguagem principal para o back-end. Para agilizar o processo de desenvolvimento e facilitar a interação com nosso banco de dados(PostgreSQL), escolhi o Spring Boot e o Spring Data JPA.
+
+Nossa API oferece uma série de funcionalidades cruciais:
+- Adicionar Conteúdo: Com apenas algumas chamadas de API, podemos facilmente criar novas postagens e artigos para o blog. Os dados são persistentes e armazenados com segurança em nosso banco de dados.
+- Editar e Atualizar: A capacidade de editar postagens existentes é essencial. Com nossa API, podemos atualizar facilmente informações como título, corpo do texto e categorias.
+- Remover Conteúdo: Para manter nosso blog organizado, implementamos endpoints para exclusão de postagens quando necessário.
+- Consultas Eficientes: A capacidade de recuperar postagens com base em critérios específicos, como categoria, data de publicação ou palavras-chave, é uma das vantagens mais valiosas da nossa API.
 #
 ### Página inicial
 ![BlogHomeC](https://github.com/Wrasprodigio/blog/assets/132852135/d610ffc7-6029-47cb-8bb3-6335af8166fb)
