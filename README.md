@@ -22,16 +22,15 @@ Todos os posts que forem adicionados vão ser direcionados para a página inicia
 Quando adicionar os campos no formulário (titulo, autor e texto) vai registrar a data que foi publicado o post e mesmo após editar o post essa data não será modificada.
 Caso tentem adicionar algum post sem preencher os campos obrigatórios, aparecerá o alerta impedindo a publicação do post.
 
-![BlogNewPost1](https://github.com/Wrasprodigio/blog/assets/132852135/b454d501-9e6a-4ae3-9ac0-1c78db603fd6)
-
+![BlogNewPost1](https://github.com/Wrasprodigio/blog/assets/132852135/618b0466-5935-42dd-bea0-4e8e31814e15)
+#
 
 ### Editando Post
 
-![BlogEditPost](https://github.com/Wrasprodigio/blog/assets/132852135/eeb3e227-cc15-42f5-bac9-b4794282d471)
-
+![BlogEditPost](https://github.com/Wrasprodigio/blog/assets/132852135/a0ac42b3-9fda-43f4-8d82-0263f6515ae5)
+#
 
 ### Pesquisando Post
 A pesquisa está sendo buscada pelo titulo ou autor do post, como podem ver na imagem foi buscado pela palavra "va" e como resposta foi encontrado dois posts.
 
 ![BlogSearch](https://github.com/Wrasprodigio/blog/assets/132852135/f4d70c8f-8041-41d9-ad93-2561ac856062)
-#
