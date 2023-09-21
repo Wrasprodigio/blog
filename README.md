@@ -1,7 +1,7 @@
 # Blog
 ### Segundo Projeto em Java
 🖥️ Tecnologias Utilizadas:<br>
-- Java, Spring Boot, Spring Data JPA, Spring Securi, PostgreSQL, Thymeleaf e Bootstrap<br>
+- Java, Spring Boot, Spring Data JPA, PostgreSQL, Thymeleaf e Bootstrap<br>
 
 Este projeto foi um desafio para mim, algumas das funcionalidades que construir:
 - Criação de Posts: Os usuários podem criar, editar e excluir facilmente suas postagens, com suporte a formatação de texto enriquecido.<br>
