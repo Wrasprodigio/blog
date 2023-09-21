@@ -1,12 +1,12 @@
 # Blog
 ### Segundo Projeto em Java
 🖥️ Tecnologias Utilizadas:<br>
--Java, Spring Boot, Spring Data JPA, Spring Securi, PostgreSQL, Thymeleaf e Bootstrap<br><br>
-Este projeto foi um desafio para mim, algumas das funcionalidades que construir:<br>
+- Java, Spring Boot, Spring Data JPA, Spring Securi, PostgreSQL, Thymeleaf e Bootstrap<br>
 
-Criação de Posts: Os usuários podem criar, editar e excluir facilmente suas postagens, com suporte a formatação de texto enriquecido.<br>
-Pesquisa e Navegação: Um sistema de pesquisa eficaz e navegação intuitiva facilita a descoberta de conteúdo.<br>
-Responsividade: O Blog é totalmente responsivo, garantindo uma experiência de usuário consistente em dispositivos móveis e desktops.
+Este projeto foi um desafio para mim, algumas das funcionalidades que construir:
+- Criação de Posts: Os usuários podem criar, editar e excluir facilmente suas postagens, com suporte a formatação de texto enriquecido.<br>
+- Pesquisa e Navegação: Um sistema de pesquisa eficaz e navegação intuitiva facilita a descoberta de conteúdo.<br>
+- Responsividade: O Blog é totalmente responsivo, garantindo uma experiência de usuário consistente em dispositivos móveis e desktops.
 #
 ### Página inicial
 ![BlogHomeC](https://github.com/Wrasprodigio/blog/assets/132852135/d610ffc7-6029-47cb-8bb3-6335af8166fb)
